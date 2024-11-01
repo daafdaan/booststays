@@ -63,7 +63,7 @@ export default function Component() {
                     <BarChart2 className="h-12 w-12 mb-4 text-green-500" />
                     <h3 className="font-bold">Data Analytics</h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Get detailed insights into your property's performance
+                      Get detailed insights into your property&apos;s performance
                     </p>
                   </CardContent>
                 </Card>
@@ -72,7 +72,7 @@ export default function Component() {
                     <Star className="h-12 w-12 mb-4 text-green-500" />
                     <h3 className="font-bold">Optimization</h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Improve your listing's visibility and ranking
+                      Improve your listing&apos;s visibility and ranking
                     </p>
                   </CardContent>
                 </Card>
@@ -130,7 +130,7 @@ export default function Component() {
                       </div>
                     </div>
                     <p className="mt-4 text-gray-500 dark:text-gray-400">
-                      "Since using BoostStays, my property's bookings have increased by 50% and my revenue has doubled!"
+                      &quot;Since using BoostStays, my property&apos;s bookings have increased by 50% and my revenue has doubled!&quot;
                     </p>
                   </CardContent>
                 </Card>
