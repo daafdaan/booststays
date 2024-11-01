@@ -20,23 +20,38 @@ export default function Component() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-gray-100 to-white">
-          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <Badge className="rounded-full" variant="secondary">
-                  Maximize Your Booking Potential
-                </Badge>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+        <section className="w-full min-h-[85vh] flex items-center justify-center relative">
+          <Image
+            src="/images/hero.jpg"
+            alt="Luxury villa with infinity pool at sunset"
+            fill
+            priority
+            className="object-cover absolute inset-0 brightness-[0.7]"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/10" />
+          
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+            <div className="flex flex-col items-center space-y-8 text-center">
+              <Badge 
+                className="rounded-full bg-white/90 text-black hover:bg-white/95 transition-colors" 
+                variant="secondary"
+              >
+                Maximize Your Booking Potential
+              </Badge>
+              
+              <div className="space-y-6">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-white max-w-[1000px]">
                   Boost Your Property Rankings on Booking.com & Airbnb
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                <p className="mx-auto max-w-[700px] text-gray-100 text-xl md:text-2xl font-light">
                   Expert guidance and proven strategies to increase your visibility, bookings, and revenue on major booking platforms.
                 </p>
               </div>
-              <div className="w-full max-w-sm space-y-2">
+
+              <div className="w-full max-w-md space-y-4 mt-4">
                 <EmailForm />
-                <p className="text-xs text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-200">
                   Try it risk-free. No credit card required.
                 </p>
               </div>
@@ -109,32 +124,102 @@ export default function Component() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              {[1, 2, 3, 4].map((i) => (
-                <Card key={i}>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <Image
-                        alt="Property"
-                        className="rounded-full"
-                        height="40"
-                        src="/placeholder.svg"
-                        style={{
-                          aspectRatio: "40/40",
-                          objectFit: "cover",
-                        }}
-                        width="40"
-                      />
-                      <div className="space-y-2">
-                        <p className="text-sm font-medium leading-none">Sarah Johnson</p>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">Property Owner</p>
-                      </div>
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <Image
+                      alt="Profile"
+                      className="rounded-full"
+                      height="40"
+                      src="/images/thomas-weber.jpg"
+                      style={{
+                        aspectRatio: "40/40",
+                        objectFit: "cover",
+                      }}
+                      width="40"
+                    />
+                    <div className="space-y-2">
+                      <p className="text-sm font-medium leading-none">Thomas Weber</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Munich, Germany</p>
                     </div>
-                    <p className="mt-4 text-gray-500 dark:text-gray-400">
-                      &quot;Since using BoostStays, my property&apos;s bookings have increased by 50% and my revenue has doubled!&quot;
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+                  </div>
+                  <p className="mt-4 text-gray-500 dark:text-gray-400">
+                    &ldquo;Within 3 months of using BoostStays, my occupancy rate increased from 65% to 89%. The data-driven insights helped me optimize my pricing strategy for the Oktoberfest season.&rdquo;
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <Image
+                      alt="Profile"
+                      className="rounded-full"
+                      height="40"
+                      src="/images/sofia-rossi.jpg"
+                      style={{
+                        aspectRatio: "40/40",
+                        objectFit: "cover",
+                      }}
+                      width="40"
+                    />
+                    <div className="space-y-2">
+                      <p className="text-sm font-medium leading-none">Sofia Rossi</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Florence, Italy</p>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-gray-500 dark:text-gray-400">
+                    &ldquo;The expert support helped me improve my listing descriptions and photos. My average rating went up to 4.9 stars, and I&rsquo;m now getting 40% more bookings compared to last year.&rdquo;
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <Image
+                      alt="Profile"
+                      className="rounded-full"
+                      height="40"
+                      src="/images/henrik-nielsen.jpg"
+                      style={{
+                        aspectRatio: "40/40",
+                        objectFit: "cover",
+                      }}
+                      width="40"
+                    />
+                    <div className="space-y-2">
+                      <p className="text-sm font-medium leading-none">Henrik Nielsen</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Copenhagen, Denmark</p>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-gray-500 dark:text-gray-400">
+                    &ldquo;BoostStays&rsquo; analytics helped me identify the perfect price point for different seasons. My revenue has increased by 75% since last winter, and I&rsquo;m getting much better quality guests.&rdquo;
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <Image
+                      alt="Profile"
+                      className="rounded-full"
+                      height="40"
+                      src="/images/marie-dubois.jpg"
+                      style={{
+                        aspectRatio: "40/40",
+                        objectFit: "cover",
+                      }}
+                      width="40"
+                    />
+                    <div className="space-y-2">
+                      <p className="text-sm font-medium leading-none">Marie Dubois</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Lyon, France</p>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-gray-500 dark:text-gray-400">
+                    &ldquo;The optimization suggestions were game-changing. My property now ranks on the first page for my area, and I&rsquo;ve seen a 60% increase in direct bookings. Worth every penny!&rdquo;
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -149,22 +234,108 @@ export default function Component() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-              {['Basic', 'Pro', 'Enterprise'].map((plan) => (
-                <Card key={plan} className="border-blue-800 border-2">
-                  <CardContent className="p-6">
-                    <h3 className="font-bold text-xl text-blue-800">{plan}</h3>
-                    <div className="mt-4 space-y-2">
-                      {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="flex items-center">
-                          <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                          <p className="text-sm text-gray-500 dark:text-gray-400">Feature {i}</p>
-                        </div>
-                      ))}
+              <Card className="border-blue-800 border-2">
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-xl text-blue-800">Basic</h3>
+                  <div className="mt-2 text-3xl font-bold">$29<span className="text-lg font-normal text-gray-500">/month</span></div>
+                  <p className="mt-2 text-sm text-gray-500">Perfect for new hosts or single property managers</p>
+                  <div className="mt-6 space-y-4">
+                    <div className="space-y-2">
+                      <div className="font-medium">Listing Optimization Assistant</div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">Title & description recommendations</p>
+                      </div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">Photo order optimization</p>
+                      </div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">Amenity checklist optimization</p>
+                      </div>
                     </div>
-                    <Button className="mt-6 w-full bg-blue-800 hover:bg-blue-900 text-white">Get Started</Button>
-                  </CardContent>
-                </Card>
-              ))}
+                    <div className="space-y-2">
+                      <div className="font-medium">Basic Analytics Dashboard</div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">Occupancy tracking</p>
+                      </div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">Basic pricing insights</p>
+                      </div>
+                    </div>
+                  </div>
+                  <Button className="mt-8 w-full bg-blue-800 hover:bg-blue-900 text-white">Start Free Trial</Button>
+                </CardContent>
+              </Card>
+              <Card className="border-blue-800 border-2 lg:scale-105 relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <Badge className="bg-blue-800 text-white">Most Popular</Badge>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-xl text-blue-800">Professional</h3>
+                  <div className="mt-2 text-3xl font-bold">$79<span className="text-lg font-normal text-gray-500">/month</span></div>
+                  <p className="mt-2 text-sm text-gray-500">Ideal for experienced hosts looking to maximize revenue</p>
+                  <div className="mt-6 space-y-4">
+                    <div className="space-y-2">
+                      <div className="font-medium">Everything in Basic, plus:</div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">Dynamic pricing recommendations</p>
+                      </div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">AI-powered listing description generator</p>
+                      </div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">24/7 email support</p>
+                      </div>
+                    </div>
+                  </div>
+                  <Button className="mt-8 w-full bg-blue-800 hover:bg-blue-900 text-white">Start Free Trial</Button>
+                </CardContent>
+              </Card>
+              <Card className="border-blue-800 border-2">
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-xl text-blue-800">Enterprise</h3>
+                  <div className="mt-2 text-3xl font-bold">$199<span className="text-lg font-normal text-gray-500">/month</span></div>
+                  <p className="mt-2 text-sm text-gray-500">For property managers with multiple listings</p>
+                  <div className="mt-6 space-y-4">
+                    <div className="space-y-2">
+                      <div className="font-medium">Everything in Professional, plus:</div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">Multi-property dashboard</p>
+                      </div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">Custom pricing algorithms</p>
+                      </div>
+                      <div className="flex items-center">
+                        <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                        <p className="text-sm text-gray-500">Personal account manager</p>
+                      </div>
+                    </div>
+                  </div>
+                  <Button className="mt-8 w-full bg-blue-800 hover:bg-blue-900 text-white">Contact Sales</Button>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="mt-8 text-center">
+              <p className="text-sm text-gray-500">
+                All plans include a 14-day free trial. No credit card required.
+              </p>
+              <div className="mt-4 flex justify-center gap-4">
+                <Link className="text-sm text-blue-800 hover:underline" href="#">
+                  View full feature comparison
+                </Link>
+                <Link className="text-sm text-blue-800 hover:underline" href="#">
+                  Enterprise custom pricing
+                </Link>
+              </div>
             </div>
           </div>
         </section>

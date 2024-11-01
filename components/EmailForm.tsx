@@ -16,15 +16,18 @@ export function EmailForm() {
   return (
     <form onSubmit={handleSubmit} className="flex space-x-2">
       <Input
-        className="max-w-lg flex-1"
-        placeholder="Enter your email"
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        placeholder="Enter your email"
+        className="flex-1 h-12 px-4 bg-white/95 border-0 focus:ring-2 focus:ring-blue-600 text-base"
       />
-      <Button type="submit" className="bg-blue-800 hover:bg-blue-900 text-white">
+      <Button 
+        type="submit"
+        className="h-12 px-6 bg-blue-600 hover:bg-blue-700 text-white"
+      >
         Get Started
-        <ArrowRight className="ml-2 h-4 w-4" />
+        <ArrowRight className="ml-2 h-5 w-5" />
       </Button>
     </form>
   )
