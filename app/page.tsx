@@ -3,7 +3,7 @@ import { Navigation } from "@/components/Navigation"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, CheckCircle, BarChart2, Star, Users, TrendingUp } from "lucide-react"
+import { CheckCircle, BarChart2, Star, Users, TrendingUp } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
