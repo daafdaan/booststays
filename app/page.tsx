@@ -41,7 +41,7 @@ export default function Component() {
               </Badge>
               
               <div className="space-y-6">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-white max-w-[1000px]">
+                <h1 className="text-4xl font-medium tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl/none text-white max-w-[1000px]">
                   Boost Your Property Rankings on Booking.com & Airbnb
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-100 text-xl md:text-2xl font-light">
@@ -65,7 +65,7 @@ export default function Component() {
                 <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm">
                   Why Choose BoostStays
                 </div>
-                <h2 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+                <h2 className="lg:leading-tighter text-3xl font-medium tracking-[-0.04em] sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
                   Transform Your Property Performance
                 </h2>
                 <p className="text-gray-500 md:text-xl dark:text-gray-400">
@@ -117,7 +117,7 @@ export default function Component() {
           <div className="container mx-auto px-4 md:px-6 max-w-7xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Success Stories</h2>
+                <h2 className="text-3xl font-medium tracking-[-0.04em] sm:text-5xl">Success Stories</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   See how property owners like you have transformed their business with BoostStays
                 </p>
@@ -227,7 +227,7 @@ export default function Component() {
           <div className="container mx-auto px-4 md:px-6 max-w-7xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Simple, Transparent Pricing</h2>
+                <h2 className="text-3xl font-medium tracking-[-0.04em] sm:text-5xl">Simple, Transparent Pricing</h2>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Choose the perfect plan for your property
                 </p>
@@ -236,7 +236,7 @@ export default function Component() {
             <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-12">
               <Card className="border-blue-800 border-2">
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl text-blue-800">Basic</h3>
+                  <h3 className="font-medium text-xl text-blue-800">Basic</h3>
                   <div className="mt-2 text-3xl font-bold">$29<span className="text-lg font-normal text-gray-500">/month</span></div>
                   <p className="mt-2 text-sm text-gray-500">Perfect for new hosts or single property managers</p>
                   <div className="mt-6 space-y-4">
@@ -275,7 +275,7 @@ export default function Component() {
                   <Badge className="bg-blue-800 text-white">Most Popular</Badge>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl text-blue-800">Professional</h3>
+                  <h3 className="font-medium text-xl text-blue-800">Professional</h3>
                   <div className="mt-2 text-3xl font-bold">$79<span className="text-lg font-normal text-gray-500">/month</span></div>
                   <p className="mt-2 text-sm text-gray-500">Ideal for experienced hosts looking to maximize revenue</p>
                   <div className="mt-6 space-y-4">
@@ -300,7 +300,7 @@ export default function Component() {
               </Card>
               <Card className="border-blue-800 border-2">
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl text-blue-800">Enterprise</h3>
+                  <h3 className="font-medium text-xl text-blue-800">Enterprise</h3>
                   <div className="mt-2 text-3xl font-bold">$199<span className="text-lg font-normal text-gray-500">/month</span></div>
                   <p className="mt-2 text-sm text-gray-500">For property managers with multiple listings</p>
                   <div className="mt-6 space-y-4">
@@ -343,7 +343,7 @@ export default function Component() {
           <div className="container mx-auto px-4 md:px-6 max-w-7xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Boost Your Property?</h2>
+                <h2 className="text-3xl font-medium tracking-[-0.04em] sm:text-5xl">Ready to Boost Your Property?</h2>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Join thousands of successful property owners who have transformed their business with BoostStays
                 </p>
