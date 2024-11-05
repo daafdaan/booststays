@@ -1,33 +1,52 @@
 'use client'
 
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { ArrowRight } from "lucide-react"
-import { useState } from "react"
+import { submitEmail } from "@/app/actions"
+import { toast } from "sonner"
 
 export function EmailForm() {
   const [email, setEmail] = useState("")
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted with email:", email)
+    setStatus('loading')
+    
+    try {
+      const result = await submitEmail(email)
+      if (result.success) {
+        setStatus('success')
+        setEmail('')
+        toast.success("Thanks for your interest! We'll be in touch soon.")
+      } else {
+        throw new Error()
+      }
+    } catch {
+      setStatus('error')
+      toast.error("Something went wrong. Please try again.")
+    } finally {
+      setStatus('idle')
+    }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex space-x-2">
+    <form onSubmit={handleSubmit} className="flex w-full max-w-sm items-center space-x-2">
       <Input
         type="email"
+        placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
-        className="flex-1 h-12 px-4 bg-white/95 border-0 focus:ring-2 focus:ring-blue-600 text-base"
+        required
+        className="bg-white h-12 px-4 focus:border-[#2e74ff] focus:ring-[#2e74ff] text-base rounded-lg"
       />
       <Button 
-        type="submit"
-        className="h-12 px-6 bg-blue-600 hover:bg-blue-700 text-white"
+        type="submit" 
+        disabled={status === 'loading'}
+        className="bg-[#2e74ff] hover:bg-[#2361db] text-white px-6 h-12 rounded-lg text-base font-medium"
       >
-        Get Started
-        <ArrowRight className="ml-2 h-5 w-5" />
+        {status === 'loading' ? 'Sending...' : 'Get Started'}
       </Button>
     </form>
   )

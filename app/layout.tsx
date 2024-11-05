@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { Toaster } from 'sonner'
 
 export const metadata: Metadata = {
   title: 'BoostStays',
@@ -16,7 +17,10 @@ export default function RootLayout({
       <head>
         <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
       </head>
-      <body className="font-satoshi" suppressHydrationWarning>{children}</body>
+      <body className="font-satoshi" suppressHydrationWarning>
+        {children}
+        <Toaster />
+      </body>
     </html>
   )
 }
