@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { CheckCircle, TrendingUp } from "lucide-react"
+import { CheckCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -26,8 +26,13 @@ export default function Component() {
       <header className="px-4 lg:px-6 h-16 flex items-center bg-gray-100">
         <div className="container mx-auto flex justify-between items-center">
           <Link className="flex items-center justify-center" href="/">
-            <TrendingUp className="h-6 w-6" />
-            <span className="ml-2 text-lg font-bold">BoostStays</span>
+            <Image 
+              src="/images/bs_icon.png"
+              alt="BoostStays Icon"
+              width={24}
+              height={24}
+            />
+            <span className="ml-2 text-lg font-extrabold">BoostStays</span>
           </Link>
           <Navigation />
         </div>
